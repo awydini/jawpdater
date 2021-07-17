@@ -1,10 +1,7 @@
 package net.aydini.jawpdater.runner;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.concurrent.CompletableFuture;
+import java.util.Scanner;
 
 import lombok.extern.slf4j.Slf4j;
 import net.aydini.jawpdater.util.UserOs;
@@ -22,29 +19,27 @@ public class ScriptExecuter
 	/**
 	 * executes script
 	 * @param scriptFilePath
-	 * @return true if executes scriptFile successfully
 	 */
 	protected void execute(final String scriptFilePath)
 	{
-		CompletableFuture.runAsync(()->executeInParallel(scriptFilePath));
+		executeInParallel(scriptFilePath);
+		try {
+			File file = new File("bin"+ new UserOs().getPathSeperator()+scriptFilePath);
+			file.setExecutable(true, false);
+			log.info(file.getAbsolutePath());
+			Scanner sc= new Scanner(file);
+			String command = sc.nextLine();
+			log.info(command);
+			Runtime.getRuntime().exec(command);
+			sc.close();
+		} catch (final Exception e) {
+			log.error("error starting program {} ",e.getMessage());
+		}
 	}
 	
 	private void executeInParallel(final String scriptFilePath)
 	{
-		try {
-			File file = new File("bin"+ new UserOs().getPathSeperator()+scriptFilePath);
-			file.setExecutable(true);
-			log.info(file.getAbsolutePath());
-			Process process = new ProcessBuilder(file.getAbsolutePath()).start();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            int lineNumber = 0;
-			String line;
-            while ((line = reader.readLine()) != null&&lineNumber <50) {
-                log.info("{} output line {} --> {}",scriptFilePath,++lineNumber,line);
-            }
-		} catch (final IOException e) {
-			log.error("error starting program {} ",e.getMessage());
-		}
+		
 		
 	}
 

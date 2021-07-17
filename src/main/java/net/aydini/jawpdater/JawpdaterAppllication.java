@@ -43,9 +43,8 @@ public class JawpdaterAppllication {
 			jawpdaterExecuterFactory.getJawpdaterExecuter().executeApplication();
 		}catch(Exception e)
 		{
-			
+			log.info(e.getMessage());
 		}
-		Runtime.getRuntime().halt(0);
 	}
 	
 	public void update()

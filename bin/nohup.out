@@ -127,3 +127,76 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0xff
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-07-17 15:14:58.165  INFO 41451 --- [           main] i.mupra.print.PrintwarehouseApplication  : Starting PrintwarehouseApplication v1.0.1-SNAPSHOT using Java 11 on aydini with PID 41451 (/home/aydin/Desktop/jawpdater/printer.jar started by aydin in /home/aydin/Desktop/jawpdater/bin)
+2021-07-17 15:14:58.168  INFO 41451 --- [           main] i.mupra.print.PrintwarehouseApplication  : No active profile set, falling back to default profiles: default
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass (jar:file:/home/aydin/Desktop/jawpdater/printer.jar!/BOOT-INF/lib/groovy-2.5.14.jar!/) to method java.lang.Object.finalize()
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.reflection.CachedClass
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2021-07-17 15:14:59.456  INFO 41451 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-17 15:14:59.745  INFO 41451 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 276 ms. Found 9 JPA repository interfaces.
+2021-07-17 15:15:00.053  INFO 41451 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=710ec8b5-bce9-38d5-b806-ee8de6c046f6
+2021-07-17 15:15:00.723  INFO 41451 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2021-07-17 15:15:00.736  INFO 41451 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-17 15:15:00.737  INFO 41451 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-07-17 15:15:00.797  INFO 41451 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-17 15:15:00.797  INFO 41451 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2273 ms
+2021-07-17 15:15:00.864  INFO 41451 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-17 15:15:01.210  INFO 41451 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-17 15:15:01.218  INFO 41451 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2db'. Database available at 'jdbc:h2:./mupra'
+2021-07-17 15:15:01.465  INFO 41451 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-17 15:15:01.590  INFO 41451 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-07-17 15:15:01.781  INFO 41451 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-17 15:15:02.023  INFO 41451 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-17 15:15:03.129  INFO 41451 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-17 15:15:03.144  INFO 41451 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-17 15:15:03.162  INFO 41451 --- [           main] i.m.p.p.service.FileService              : Old files (1 files) removed
+2021-07-17 15:15:04.246  WARN 41451 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-17 15:15:04.698  INFO 41451 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 36169106-0e5a-4dbd-9510-85ecbaa3cddb
+
+2021-07-17 15:15:04.929  INFO 41451 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c950b3b, org.springframework.security.web.context.SecurityContextPersistenceFilter@437c4b25, org.springframework.security.web.header.HeaderWriterFilter@1e1e837d, org.springframework.web.filter.CorsFilter@3af10d0b, org.springframework.security.web.authentication.logout.LogoutFilter@6b162ecc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@580902cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f85ee02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6806468e, org.springframework.security.web.session.SessionManagementFilter@527a8665, org.springframework.security.web.access.ExceptionTranslationFilter@5b29ab61, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15e8f9b2]
+2021-07-17 15:15:05.262  WARN 41451 --- [           main] .b.a.g.t.GroovyTemplateAutoConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+2021-07-17 15:15:05.612  INFO 41451 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-07-17 15:15:05.965  INFO 41451 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2021-07-17 15:15:06.132  INFO 41451 --- [           main] i.mupra.print.PrintwarehouseApplication  : Started PrintwarehouseApplication in 8.687 seconds (JVM running for 9.284)
+2021-07-17 15:15:06.134  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-17 15:15:06.135  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-17 15:15:06.135  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-17 15:15:06.135  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-17 15:15:06.641  INFO 41451 --- [   scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :400 
+2021-07-17 15:15:16.643  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-17 15:15:16.643  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-17 15:15:16.644  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-17 15:15:16.644  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-17 15:15:16.885  INFO 41451 --- [   scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :400 
+2021-07-17 15:15:26.887  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-17 15:15:26.887  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-17 15:15:26.887  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-17 15:15:26.888  INFO 41451 --- [   scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
