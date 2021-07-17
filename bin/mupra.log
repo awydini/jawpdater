@@ -1,0 +1,155 @@
+2021-07-16 17:12:39.318  INFO 27861 --- [main] i.mupra.print.PrintwarehouseApplication  : Starting PrintwarehouseApplication v1.0.1-SNAPSHOT using Java 11 on aydini with PID 27861 (/home/aydin/Desktop/jawpdater/printer.jar started by aydin in /home/aydin/Desktop/jawpdater/bin)
+2021-07-16 17:12:39.332  INFO 27861 --- [main] i.mupra.print.PrintwarehouseApplication  : No active profile set, falling back to default profiles: default
+2021-07-16 17:12:40.663  INFO 27861 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-16 17:12:40.949  INFO 27861 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 274 ms. Found 9 JPA repository interfaces.
+2021-07-16 17:12:41.301  INFO 27861 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=710ec8b5-bce9-38d5-b806-ee8de6c046f6
+2021-07-16 17:12:41.892  INFO 27861 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2021-07-16 17:12:41.907  INFO 27861 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-16 17:12:41.908  INFO 27861 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-07-16 17:12:41.978  INFO 27861 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-16 17:12:41.978  INFO 27861 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2255 ms
+2021-07-16 17:12:42.051  INFO 27861 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-16 17:12:42.401  INFO 27861 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-16 17:12:42.409  INFO 27861 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2db'. Database available at 'jdbc:h2:./mupra'
+2021-07-16 17:12:42.637  INFO 27861 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-16 17:12:42.758  INFO 27861 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-07-16 17:12:42.933  INFO 27861 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-16 17:12:43.147  INFO 27861 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-16 17:12:44.179  INFO 27861 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-16 17:12:44.196  INFO 27861 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-16 17:12:44.216  INFO 27861 --- [main] i.m.p.p.service.FileService              : Old files (1 files) removed
+2021-07-16 17:12:45.273  WARN 27861 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-16 17:12:45.695  INFO 27861 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: edb37084-6bc4-4eb8-8753-ec6b11fb9e7f
+
+2021-07-16 17:12:45.953  INFO 27861 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b768a65, org.springframework.security.web.context.SecurityContextPersistenceFilter@39e53bef, org.springframework.security.web.header.HeaderWriterFilter@764fffa0, org.springframework.web.filter.CorsFilter@6897a4a, org.springframework.security.web.authentication.logout.LogoutFilter@3757e8e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed18798, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e1e837d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6986f93e, org.springframework.security.web.session.SessionManagementFilter@6af609ea, org.springframework.security.web.access.ExceptionTranslationFilter@5b733ef7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19fec3d6]
+2021-07-16 17:12:46.331  WARN 27861 --- [main] .b.a.g.t.GroovyTemplateAutoConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+2021-07-16 17:12:46.648  INFO 27861 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-07-16 17:12:47.404  INFO 27861 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2021-07-16 17:12:47.557  INFO 27861 --- [main] i.mupra.print.PrintwarehouseApplication  : Started PrintwarehouseApplication in 9.128 seconds (JVM running for 9.786)
+2021-07-16 17:12:47.559  INFO 27861 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:12:47.562  INFO 27861 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:12:47.562  INFO 27861 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:12:47.563  INFO 27861 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:12:48.037  INFO 27861 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:20:07.803  INFO 30234 --- [main] i.mupra.print.PrintwarehouseApplication  : Starting PrintwarehouseApplication v1.0.1-SNAPSHOT using Java 11 on aydini with PID 30234 (/home/aydin/Desktop/jawpdater/printer.jar started by aydin in /home/aydin/Desktop/jawpdater/bin)
+2021-07-16 17:20:07.806  INFO 30234 --- [main] i.mupra.print.PrintwarehouseApplication  : No active profile set, falling back to default profiles: default
+2021-07-16 17:20:09.107  INFO 30234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-16 17:20:09.400  INFO 30234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280 ms. Found 9 JPA repository interfaces.
+2021-07-16 17:20:09.683  INFO 30234 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=710ec8b5-bce9-38d5-b806-ee8de6c046f6
+2021-07-16 17:20:10.237  INFO 30234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2021-07-16 17:20:10.250  INFO 30234 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-16 17:20:10.250  INFO 30234 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-07-16 17:20:10.310  INFO 30234 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-16 17:20:10.311  INFO 30234 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2130 ms
+2021-07-16 17:20:10.376  INFO 30234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-16 17:20:10.726  INFO 30234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-16 17:20:10.733  INFO 30234 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2db'. Database available at 'jdbc:h2:./mupra'
+2021-07-16 17:20:10.959  INFO 30234 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-16 17:20:11.071  INFO 30234 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-07-16 17:20:11.257  INFO 30234 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-16 17:20:11.478  INFO 30234 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-16 17:20:12.677  INFO 30234 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-16 17:20:12.692  INFO 30234 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-16 17:20:12.714  INFO 30234 --- [main] i.m.p.p.service.FileService              : Old files (1 files) removed
+2021-07-16 17:20:13.595  WARN 30234 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-16 17:20:14.008  INFO 30234 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 36bc419d-b66b-44b4-a07d-766c00f647d9
+
+2021-07-16 17:20:14.309  INFO 30234 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66f5b8fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@f245bdd, org.springframework.security.web.header.HeaderWriterFilter@691541bc, org.springframework.web.filter.CorsFilter@233f52f8, org.springframework.security.web.authentication.logout.LogoutFilter@437c4b25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@280fafd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b03cbad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69ec93c2, org.springframework.security.web.session.SessionManagementFilter@11df2829, org.springframework.security.web.access.ExceptionTranslationFilter@29962b2f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b9c411]
+2021-07-16 17:20:14.648  WARN 30234 --- [main] .b.a.g.t.GroovyTemplateAutoConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+2021-07-16 17:20:15.030  INFO 30234 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-07-16 17:20:15.569  INFO 30234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2021-07-16 17:20:15.725  INFO 30234 --- [main] i.mupra.print.PrintwarehouseApplication  : Started PrintwarehouseApplication in 8.625 seconds (JVM running for 9.246)
+2021-07-16 17:20:15.726  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:20:15.728  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:20:15.728  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:20:15.728  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:20:16.079  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:20:26.080  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:20:26.081  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:20:26.081  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:20:26.082  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:20:26.375  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:20:36.376  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:20:36.377  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:20:36.377  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:20:36.377  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:20:36.670  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:20:46.671  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:20:46.674  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:20:46.674  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:20:46.674  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:20:46.986  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:20:56.987  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:20:56.988  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:20:56.988  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:20:56.989  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:20:57.266  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:21:07.267  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:21:07.268  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:21:07.268  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:21:07.268  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:21:07.634  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:21:17.636  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------begin request---------- 
+2021-07-16 17:21:17.638  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : request data : 
+ GET /printer/print/9311 HTTP/1.1
+Authorization: Basic YXBpOm11cHJhIzEyM0A=
+Content-Type: application/json
+
+Binary data
+2021-07-16 17:21:17.639  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : queries : {} 
+2021-07-16 17:21:17.639  INFO 30234 --- [scheduling-1] i.m.print.conf.FeignRequestInterceptor   : ----------end request---------- 
+2021-07-16 17:21:17.972  INFO 30234 --- [scheduling-1] i.m.p.p.service.PrinterSchedulerService  : response status :404 
+2021-07-16 17:21:18.639  INFO 30234 --- [http-nio-8585-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0xff0xf40xff0xfd...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:417) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar!/:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+

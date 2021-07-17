@@ -1,0 +1,1 @@
+start javaw -Xmx256m -jar print.jar
