@@ -1,1 +1,1 @@
-nohup java -jar ../printer.jar &
+nohup java -jar /home/aydin/Desktop/jawpdater/printer.jar &
