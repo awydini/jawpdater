@@ -25,7 +25,7 @@ public class JawpdaterExecuterFactory {
 			else if (userOs.isUnix())
 				return new LinuxScriptRunner(jawpdaterProperties);
 			else if (userOs.isWindows())
-				return new LinuxScriptRunner(jawpdaterProperties);
+				return new WindowsScriptRunner(jawpdaterProperties);
 			throw new RuntimeException("unknown Os");
 	}
 }
