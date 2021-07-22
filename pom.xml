@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>net.aydini.jawpdater</groupId>
 	<artifactId>jawpdater</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>jawpdater</name>
 	<description>java application updater</description>
 
