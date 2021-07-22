@@ -1,19 +1,32 @@
 package net.aydini.jawpdater.runner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.aydini.jawpdater.config.JawpdaterProperties;
+import net.aydini.jawpdater.script.ScriptPath;
 import net.aydini.jawpdater.util.UserOs;
 
 @Slf4j
 @Service
-@RequiredArgsConstructor
 public class JawpdaterExecuterFactory {
 
-	private final JawpdaterProperties jawpdaterProperties;
 
+	@Autowired
+	@Qualifier("windowsScriptPath")
+	private ScriptPath windowsScriptPath;
+	
+	
+	@Autowired
+	@Qualifier("linuxScriptPath")
+	private ScriptPath linuxScriptPath;
+	
+	
+	@Autowired
+	@Qualifier("macScriptPath")
+	private ScriptPath macScriptPath;
+	
 	private final UserOs userOs = new UserOs();
 
 
@@ -21,11 +34,11 @@ public class JawpdaterExecuterFactory {
 
 		log.info("creating starter for os {}",userOs.getOsName());
 			if (userOs.isMac())
-				return new MacScriptRunner(jawpdaterProperties);
+				return new MacScriptRunner(macScriptPath);
 			else if (userOs.isUnix())
-				return new LinuxScriptRunner(jawpdaterProperties);
+				return new LinuxScriptRunner(linuxScriptPath);
 			else if (userOs.isWindows())
-				return new WindowsScriptRunner(jawpdaterProperties);
+				return new WindowsScriptRunner(windowsScriptPath);
 			throw new RuntimeException("unknown Os");
 	}
 }

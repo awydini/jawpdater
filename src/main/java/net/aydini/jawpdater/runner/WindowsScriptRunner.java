@@ -1,6 +1,9 @@
 package net.aydini.jawpdater.runner;
 
-import net.aydini.jawpdater.config.JawpdaterProperties;
+import java.io.File;
+import java.io.IOException;
+
+import net.aydini.jawpdater.script.ScriptPath;
 
 /**
  * 
@@ -8,32 +11,28 @@ import net.aydini.jawpdater.config.JawpdaterProperties;
  *
  */
 
-public class WindowsScriptRunner extends AbstractUpdaterExecuter{
+public class WindowsScriptRunner extends AbstractUpdaterExecuter {
 
-	private final JawpdaterProperties jawpdaterProperties;
-	
-	WindowsScriptRunner(JawpdaterProperties jawpdaterProperties) {
-		this.jawpdaterProperties = jawpdaterProperties;
+	private final ScriptPath scriptPath;
+
+	WindowsScriptRunner(ScriptPath scriptPath) {
+		this.scriptPath = scriptPath;
 	}
 
 	@Override
-	protected String getExecuteBackupScript() {
-		return jawpdaterProperties.getWindowsBackupScript();
+	protected ScriptPath getScriptPath() {
+		return scriptPath;
 	}
 
 	@Override
-	protected String getExecuteDeleteBackup() {
-		return jawpdaterProperties.getWindowsDeleteBackupScript();
-	}
-
-	@Override
-	protected String getExecuteUndoBackup() {
-		return jawpdaterProperties.getWindowsUndoBackupScript();
-	}
-
-	@Override
-	protected String getExecuteApplication() {
-		return jawpdaterProperties.getWindowsRunApplicationScript();
+	protected CommandExecuter getCommandExecuter(final File scriptFile) {
+		return () -> {
+			try {
+				Runtime.getRuntime().exec("cmd /c start \"\" " + scriptFile.getAbsolutePath());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		};
 	}
 
 }

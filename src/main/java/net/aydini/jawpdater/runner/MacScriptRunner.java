@@ -1,6 +1,9 @@
 package net.aydini.jawpdater.runner;
 
-import net.aydini.jawpdater.config.JawpdaterProperties;
+import java.io.File;
+import java.io.IOException;
+
+import net.aydini.jawpdater.script.ScriptPath;
 
 /**
  * 
@@ -8,32 +11,28 @@ import net.aydini.jawpdater.config.JawpdaterProperties;
  *
  */
 
-public class MacScriptRunner extends AbstractUpdaterExecuter{
-	
-	private final JawpdaterProperties jawpdaterProperties;
-	
-	MacScriptRunner(JawpdaterProperties jawpdaterProperties) {
-		this.jawpdaterProperties = jawpdaterProperties;
+public class MacScriptRunner extends AbstractUpdaterExecuter {
+
+	private final ScriptPath scriptPath;
+
+	MacScriptRunner(ScriptPath scriptPath) {
+		this.scriptPath = scriptPath;
 	}
 
 	@Override
-	protected String getExecuteBackupScript() {
-		return jawpdaterProperties.getLinuxBackupScript();
+	protected ScriptPath getScriptPath() {
+		return scriptPath;
 	}
 
 	@Override
-	protected String getExecuteDeleteBackup() {
-		return jawpdaterProperties.getLinuxDeleteBackupScript();
-	}
-
-	@Override
-	protected String getExecuteUndoBackup() {
-		return jawpdaterProperties.getLinuxUndoBackupScript();
-	}
-
-	@Override
-	protected String getExecuteApplication() {
-		return jawpdaterProperties.getLinuxRunApplicationScript();
+	protected CommandExecuter getCommandExecuter(File scriptFile) {
+		return () -> {
+			try {
+				Runtime.getRuntime().exec(scriptFile.getAbsolutePath());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		};
 	}
 
 }

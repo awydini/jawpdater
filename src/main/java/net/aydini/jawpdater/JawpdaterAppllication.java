@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.aydini.jawpdater.runner.JawpdaterExecuter;
 import net.aydini.jawpdater.runner.JawpdaterExecuterFactory;
 import net.aydini.jawpdater.service.ApplicationUpdaterService;
+import net.aydini.jawpdater.util.FileUtil;
 
 /**
  * 
@@ -36,22 +37,19 @@ public class JawpdaterAppllication {
 
 	@PostConstruct
 	public void launch() {
-		
-		try
-		{
+
+		try {
 			update();
 			jawpdaterExecuterFactory.getJawpdaterExecuter().executeApplication();
-		}catch(Exception e)
-		{
+		} catch (Exception e) {
 			log.info(e.getMessage());
 		}
 	}
-	
-	public void update()
-	{
+
+	public void update() {
 		JawpdaterExecuter jawpdaterExecutor = jawpdaterExecuterFactory.getJawpdaterExecuter();
 		try {
-			if (!applicationupdaterService.isProgramUpToDate()) {
+			if (!applicationupdaterService.isProgramUpToDate() || !FileUtil.isBinaryExist()) {
 				jawpdaterExecutor.executeBackup();
 				applicationupdaterService.download();
 				applicationupdaterService.confirmUpdate();
@@ -61,7 +59,7 @@ public class JawpdaterAppllication {
 		} catch (Exception e) {
 			log.error("error updating application : {}", e.getMessage());
 			jawpdaterExecutor.executeUndoBackup();
-			throw new RuntimeException(e.getMessage(),e);
+			throw new RuntimeException(e.getMessage(), e);
 		}
 	}
 }
