@@ -1,1 +1,2 @@
-Ren “printer_bk.jar” “printer.jar” 
+ren printer_bk.jar printer.jar
+exit 

@@ -1,1 +1,2 @@
-start javaw -Xmx256m -jar ..\printer.jar
+start javaw -Xmx1024m -jar printer.jar
+exit
