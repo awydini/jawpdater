@@ -21,4 +21,11 @@ public class FileUtil {
 			log.error("fail to save file {}. cause : {}",fileName,e.getMessage());
 		}	
 	}
+	
+	
+	public static boolean isBinaryExist()
+	{
+		File file = new File("printer.jar");
+		return file .exists();
+	}
 }
